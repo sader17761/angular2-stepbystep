@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+import { EmployeeComponent } from './employee/employee.component'
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <div>
+      <h1>{{pageHeader}}</h1>
+      <employee></employee>
+    </div>
+  `,
 })
 export class AppComponent {
-  title = 'app';
+  pageHeader: string = 'Employee Details';
 }
