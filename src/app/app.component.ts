@@ -20,6 +20,8 @@ import { EmployeeComponent } from './employee/employee.component'
       <!-- both interpolation and property binding sanitize the code before displaying -->
       <div>{{badHtml}}</div>
       <div [innerHtml]='badHtml'></div>
+      <!-- Dom values and attribute values are two different things...Dom values can change, where attribute values can not. -->
+      <div><input id='inputId' type="text" value='Tom'></div>
     </div>
   `,
 })
