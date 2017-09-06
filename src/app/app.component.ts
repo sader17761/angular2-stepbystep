@@ -32,6 +32,9 @@ import { EmployeeComponent } from './employee/employee.component'
       <button style='color:blue;' [style.font-weight]="isBold ? 'bold' : 'normal'">Style Binding Button</button>
       <button style='color:green;' [style.font-size.px]="fontSize">Style Binding Button</button>
       <button style='color:orange;' [ngStyle]="addStyles()">Style Binding Button</button>
+      <!-- Event Binding: data flows in the opposite direction: from HTML to Component-->
+      <h3>Event Binding</h3>
+      <button (click)='onClick()'>Event Binding Button</button>
     </div>
   `,
 })
@@ -50,6 +53,11 @@ export class AppComponent {
   isBold: boolean = true;
   fontSize: number = 14;
   isItalic: boolean = true;
+
+  //Event Binding
+  onClick() : void {
+    console.log('Event Button Clicked!');
+  }
 
   addStyles() {
     let styles = {
