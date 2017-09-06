@@ -35,6 +35,15 @@ import { EmployeeComponent } from './employee/employee.component'
       <!-- Event Binding: data flows in the opposite direction: from HTML to Component-->
       <h3>Event Binding</h3>
       <button (click)='onClick()'>Event Binding Button</button>
+      <!-- Two Way Data Binding -->
+      <h3>Two Way Data Binding</h3>
+      Name: <input [value]='name' (input)='name=$event.target.value'/>
+      <br>
+      You Entered: {{name}}
+      <p>OR (there are two ways to write this, see code in app.component.ts)</p>
+      Name: <input [(ngModel)]='otherName'/>
+      <br>
+      You Entered: {{otherName}}
     </div>
   `,
 })
@@ -53,6 +62,8 @@ export class AppComponent {
   isBold: boolean = true;
   fontSize: number = 14;
   isItalic: boolean = true;
+  name: string = 'Tom';
+  otherName: string = 'Corey';
 
   //Event Binding
   onClick() : void {
