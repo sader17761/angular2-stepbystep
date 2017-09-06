@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './employee.component.html'
 })
 export class EmployeeComponent {
+  columnSpan: number = 2;
   firstName: string = 'Tom';
   lastName: string = 'Hopkins';
   gender: string = 'Male';
