@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 export class EmployeeListComponent {
   employees: any[];
 
+  selectedEmployeeCountRadioButton: string = 'All';
+
   constructor() {
     this.employees = [
       { code: 'emp101', name: 'Tom', gender: 'Male', annualSalary: 5500, dateOfBirth: '6/25/1988'},
@@ -18,6 +20,10 @@ export class EmployeeListComponent {
       { code: 'emp105', name: 'Nancy', gender: 'Female', annualSalary: 6500.826, dateOfBirth: '12/15/1982'},
       { code: 'emp106', name: 'Steve', gender: 'Male', annualSalary: 7700.48, dateOfBirth: '11/18/1979'},
     ];
+  }
+
+  onEmployeeCountRadioButtonChange(selectedRadioButtonValue : string) : void {
+    this.selectedEmployeeCountRadioButton = selectedRadioButtonValue;
   }
 
   // getEmployees(): void {
