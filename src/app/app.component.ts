@@ -44,6 +44,9 @@ import { EmployeeComponent } from './employee/employee.component'
       Name: <input [(ngModel)]='otherName'/>
       <br>
       You Entered: {{otherName}}
+      <!-- ngFor Directive -->
+      <h3>ngFor Directive</h3>
+      <list-employee></list-employee>
     </div>
   `,
 })
